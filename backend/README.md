@@ -1,30 +1,69 @@
-# Backend for AI Voice Assistant
+# AI Voice Assistant - Backend
 
-This directory contains the backend code for the AI Voice Assistant project.
+This directory contains the backend code for the AI Voice Assistant project, built using Python and Flask.
 
-## Description
+## Features
 
-The backend is responsible for handling [Describe the backend's responsibilities, e.g., audio processing, natural language understanding, API integrations, etc.]. It is built using [Mention the technologies used, e.g., Python, Flask, etc.].
+- Real-time audio processing
+- Speech-to-text conversion
+- Natural language understanding
+- Integration with AI models
+- REST API endpoints for frontend communication
+
+## Technologies
+
+- Python 3.10+
+- Flask
+- [Add other major dependencies here]
 
 ## Setup
 
-1.  **Install dependencies:**
+1. **Install dependencies:**
 
     ```bash
     pip install -r requirements.txt
     ```
-2.  **Environment variables:**
 
-    Create a `.env` file in the `backend` directory and define the necessary environment variables. Refer to `.env.example` for the required variables.
-3. **Run**
+2. **Environment variables:**
+
+    Create a `.env` file in the `backend` directory with these variables:
+
+    ```env
+    OPENAI_API_KEY=your_api_key_here
+    PORT=5000
+    DEBUG=True
+    ```
+
+3. **Run the server:**
+
     ```bash
     python main.py
     ```
 
+    The API will be available at `http://localhost:5000`
+
 ## API Documentation
 
-[If the backend exposes an API, provide documentation here. You can use tools like Swagger or write the documentation manually.]
+### Endpoints
+
+- `POST /api/transcribe` - Audio transcription
+- `POST /api/process` - Natural language processing
+- `GET /api/status` - Service health check
+
+[Add more detailed API documentation here]
+
+## Screenshots
+
+![API Documentation](docs/api-screenshot.png) *Add actual screenshot*
 
 ## Contributing
 
-[Provide guidelines for contributing to the backend.]
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+[MIT License](LICENSE)

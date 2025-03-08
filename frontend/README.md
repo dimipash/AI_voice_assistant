@@ -1,41 +1,70 @@
 # AI Voice Assistant - Frontend
 
-This directory contains the frontend code for the AI Voice Assistant project. It is built using React and Vite.
+This directory contains the frontend code for the AI Voice Assistant project, built using React and Vite.
 
-## Description
+## Features
 
-The frontend provides a user interface for interacting with the AI Voice Assistant. [Add more details about the frontend's features and functionality here].
+- Real-time voice interaction interface
+- Speech visualization components
+- Call management interface
+- Responsive design
+- WebSocket integration for real-time updates
 
-## Installation and Setup
+## Technologies
 
-1.  **Install dependencies:**
+- React 18+
+- Vite
+- [Add other major dependencies here]
+
+## Setup
+
+1. **Install dependencies:**
 
     ```bash
     npm install
     ```
 
-2.  **Environment variables:**
+2. **Environment variables:**
 
-    Create a `.env` file in the `frontend` directory and define the necessary environment variables. Refer to `.env.example` or the project documentation for the required variables.
+    Create a `.env` file in the `frontend` directory with these variables:
 
-3.  **Run the development server:**
+    ```env
+    VITE_API_URL=http://localhost:5000
+    VITE_WS_URL=ws://localhost:5000/ws
+    ```
+
+3. **Run the development server:**
 
     ```bash
     npm run dev
     ```
 
-    This will start the development server and open the application in your browser.
+    The application will be available at `http://localhost:5173`
 
-## Usage
+## Project Structure
 
-[Provide instructions on how to use the frontend application. Describe the user interface elements and how to interact with them.]
+```
+frontend/
+├── public/              # Static assets
+├── src/
+│   ├── call/            # Call-related components
+│   ├── App.jsx          # Main application component
+│   ├── main.jsx         # Application entry point
+│   └── index.css        # Global styles
+```
 
-## Dependencies
+## Screenshots
 
-- React
-- Vite
-- [List other major dependencies here]
+![Main Interface](docs/main-interface.png) *Add actual screenshot*
 
 ## Contributing
 
-[Provide guidelines for contributing to the frontend.]
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+[MIT License](LICENSE)
