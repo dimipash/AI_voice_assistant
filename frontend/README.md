@@ -14,7 +14,6 @@ This directory contains the frontend code for the AI Voice Assistant project, bu
 
 - React 18+
 - Vite
-- [Add other major dependencies here]
 
 ## Setup
 
