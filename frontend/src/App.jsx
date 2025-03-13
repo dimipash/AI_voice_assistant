@@ -74,36 +74,52 @@ function App() {
   return (
     <div className="app-container">
       {showForm && (
-        <>
+        <div className="form-container">
           <h1>Contact Details (Required)</h1>
-          <input
-            type="text"
-            placeholder="First Name"
-            value={firstName}
-            className="input-field"
-            onChange={handleInputChange(setFirstName)}
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            value={lastName}
-            className="input-field"
-            onChange={handleInputChange(setLastName)}
-          />
-          <input
-            type="email"
-            placeholder="Email address"
-            value={email}
-            className="input-field"
-            onChange={handleInputChange(setEmail)}
-          />
-          <input
-            type="tel"
-            placeholder="Phone number"
-            value={phoneNumber}
-            className="input-field"
-            onChange={handleInputChange(setPhoneNumber)}
-          />
+          <div className="input-group">
+            <label htmlFor="firstName" className="input-label">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="First Name"
+              value={firstName}
+              className="input-field"
+              onChange={handleInputChange(setFirstName)}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="lastName" className="input-label">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Last Name"
+              value={lastName}
+              className="input-field"
+              onChange={handleInputChange(setLastName)}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="email" className="input-label">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email address"
+              value={email}
+              className="input-field"
+              onChange={handleInputChange(setEmail)}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="phoneNumber" className="input-label">Phone Number</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              placeholder="Phone number"
+              value={phoneNumber}
+              className="input-field"
+              onChange={handleInputChange(setPhoneNumber)}
+            />
+          </div>
           {!started && (
             <button
               onClick={handleStart}
@@ -113,11 +129,12 @@ function App() {
               Call PyMentor
             </button>
           )}
-        </>
+        </div>
       )}
       {loadingResult && <p>Loading call details... please wait</p>}
       {!loadingResult && callResult && (
-        <div className="call-result">
+        <div className="call-result-container">
+          <h2>Call Result</h2>
           <p>Qualified: {callResult.analysis.structuredData.is_qualified.toString()}</p>
           <p>{callResult.summary}</p>
         </div>
